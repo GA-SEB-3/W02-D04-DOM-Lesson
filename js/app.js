@@ -32,3 +32,46 @@ pElement.style.backgroundColor = "red"
 myImageElement.style.width = "50px"
 
 myImageElement.style.border = "solid green"
+
+// creating an element and adding to the page
+
+ const bodyElement = document.querySelector("body")
+
+ console.log(bodyElement)
+
+
+ const h2Element = document.createElement('h2')
+
+ h2Element.textContent = "comments section"
+
+ bodyElement.appendChild(h2Element)
+
+//  const h3elements = document.querySelector("h3")
+//  console.log(h3elements)
+
+
+//  getting many elements
+// querySelectorAll(): returns ALL instances of elements
+const h3elements = document.querySelectorAll("h3")
+
+console.log(h3elements)
+
+h3elements.textContent = "Text changed"
+
+h3elements.forEach((oneH3Element,index)=>{
+    console.log(index)
+    // oneH3Element.textContent = "Changed text"
+    if(index ===1){
+        oneH3Element.textContent = "CHANGED for Hasan"
+    }
+})
+
+// gets the attribute of element
+console.log(myImageElement.getAttribute("src"))
+
+// ca
+myImageElement.setAttribute("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzX9A_f_jDYExfolsAhVX7IgctPaA9qU0KUg&s")
+
+console.log(myImageElement.hasAttribute("href"))
+
+myImageElement.removeAttribute("src")
